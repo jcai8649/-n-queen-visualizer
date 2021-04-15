@@ -1,0 +1,114 @@
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#root,
+#container {
+  overflow: auto;
+  margin-left: 15px;
+}
+
+h1.title {
+  margin: 30px 30px 30px 110px;
+  color: #3cb0fd;
+  font-size: 48px;
+  text-shadow: 1px 1px 1px #000;
+}
+
+h2.attribution {
+  font-size: 18px;
+  margin: -20px 0px 20px 113px;
+  text-decoration: italicize;
+}
+
+a {
+  text-decoration: none;
+  color: #4cc0ff;
+}
+
+div.algo-panel {
+  height: 400px;
+  float: left;
+}
+
+/* button {
+  font-family: "Oxygen", sans-serif;
+  font-size: 16px;
+  -webkit-border-radius: 9;
+  -moz-border-radius: 9;
+  border-radius: 9px;
+  text-shadow: 1px 1px 4px #666666;
+  box-shadow: 0 4px #27496d;
+  color: #fff;
+  background: #3498db;
+  padding: 8px 20px 10px 20px;
+  text-decoration: none;
+  border: none;
+  margin: 8px 4px;
+  width: 14em;
+  float: left;
+} */
+
+button:hover {
+  background: #3cb0fd;
+  text-decoration: none;
+}
+
+button:focus {
+  outline: 0;
+}
+
+button:active {
+  box-shadow: 0 2px #27496d;
+  transform: translateY(2px);
+}
+
+ul.buttons {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+div.iterations,
+div.temp {
+  padding: 10px 35px;
+  margin-left: 10%;
+  color: #777;
+  text-align: center;
+  font-family: "Oxygen Mono";
+}
+
+div.iterations {
+  font-size: 30px;
+}
+
+div.temp {
+  font-size: 15px;
+}
+
+div.row {
+  clear: both;
+  float: left;
+  display: block;
+  position: relative;
+}
+
+div.content-container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 400px 400px;
+  column-gap: 20px;
+}
