@@ -2,6 +2,7 @@ body {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
+  font-family: "Roboto", sans-serif;
 }
 
 @keyframes gradient {
@@ -62,25 +63,6 @@ div.algo-panel {
   width: 14em;
   float: left;
 } */
-
-button:hover {
-  background: #3cb0fd;
-  text-decoration: none;
-}
-
-button:focus {
-  outline: 0;
-}
-
-button:active {
-  box-shadow: 0 2px #27496d;
-  transform: translateY(2px);
-}
-
-ul.buttons {
-  list-style-type: none;
-  overflow: hidden;
-}
 
 div.iterations,
 div.temp {
