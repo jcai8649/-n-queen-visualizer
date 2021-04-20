@@ -1,7 +1,18 @@
 .container {
-  background-color: gray;
+  background-color: white;
+  opacity: 80%;
   height: 200px;
   width: 400px;
   margin-top: 10px;
   border-radius: 40px;
+}
+
+.h2 {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.resultContainer {
+  height: 100px;
+  overflow: auto;
 }

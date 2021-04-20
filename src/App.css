@@ -46,24 +46,6 @@ div.algo-panel {
   float: left;
 }
 
-/* button {
-  font-family: "Oxygen", sans-serif;
-  font-size: 16px;
-  -webkit-border-radius: 9;
-  -moz-border-radius: 9;
-  border-radius: 9px;
-  text-shadow: 1px 1px 4px #666666;
-  box-shadow: 0 4px #27496d;
-  color: #fff;
-  background: #3498db;
-  padding: 8px 20px 10px 20px;
-  text-decoration: none;
-  border: none;
-  margin: 8px 4px;
-  width: 14em;
-  float: left;
-} */
-
 div.iterations,
 div.temp {
   padding: 10px 35px;

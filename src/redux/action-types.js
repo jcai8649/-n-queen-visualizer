@@ -1,0 +1,10 @@
+const actionTypes = {
+  ADD_QUEEN: "ADD_QUEEN",
+  REMOVE_QUEEN: "REMOVE_QUEEN",
+  UPDATE_BOARD: "UPDATE_BOARD",
+  RESET_BOARD: "RESET_BOARD",
+  UPDATE_RESULT: "UPDATE_RESULT",
+  RESET_RESULT: "RESET_RESULT",
+};
+
+export default actionTypes;

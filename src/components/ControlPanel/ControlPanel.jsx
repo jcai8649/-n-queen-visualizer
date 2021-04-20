@@ -1,7 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import solveNQueen from "../../script/backtrack";
 import styles from "./ControlPanel.module.css";
 
 const ControlPanel = () => {
+  const dispatch = useDispatch();
+  const [nSize, setNSize] = useState("8");
+
+  const handleChange = (e) => {
+    setNSize(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    solveNQueen(Number(nSize), dispatch);
+  };
+
   return (
     <div className={styles.container}>
       <span className={styles.span}>
@@ -14,19 +28,20 @@ const ControlPanel = () => {
         puzzle.
       </span>
 
-      <form className={styles.form}>
-        <label for="nSize">n = </label>
-        <select id="nSize" name="nSize">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-        </select>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <label>
+          n ={" "}
+          <select id="nSize" name="nSize" onChange={handleChange}>
+            <option value="8">8</option>
+            <option value="7">7</option>
+            <option value="6">6</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+          </select>
+        </label>
         <div className={styles.buttonContianer}>
           <button className={styles.button}>Visualize!</button>
         </div>
