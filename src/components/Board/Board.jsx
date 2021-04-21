@@ -6,6 +6,7 @@ import QueenSqaure from "./QueenSqaure";
 
 const Board = () => {
   const board = useSelector((state) => state.board);
+
   const renderSquare = (i) => {
     let x = i % 8;
     let y = Math.floor(i / 8);
