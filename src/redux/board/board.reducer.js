@@ -1,8 +1,16 @@
 import actionType from "../action-types";
 
+const createBoard = (n) => {
+  var chessBoard = new Array(n);
+  for (var i = 0; i < n; i++) {
+    chessBoard[i] = new Array(n).fill(".");
+  }
+
+  return chessBoard;
+};
+
 const INITIAL_STATE = {
-  boardSize: 8 ** 2,
-  currentBoard: null,
+  currentBoard: [...createBoard(8)],
 };
 
 const boardReducer = (state = INITIAL_STATE, action) => {
@@ -21,7 +29,7 @@ const boardReducer = (state = INITIAL_STATE, action) => {
     // case actionType.REMOVE_QUEEN:
     case actionType.RESET_BOARD:
       return {
-        board: null,
+        board: [],
       };
     default:
       return state;
