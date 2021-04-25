@@ -12,11 +12,11 @@ const Board = () => {
     let y = Math.floor(i / rowSize);
     let black = (x + y) % 2 === 1;
 
-    return board.currentBoard[x] === "Q" ? (
-      <QueenSqaure key={i} black={black} queenId={x} />
-    ) : (
-      <EmptySquare key={i} black={black} />
-    );
+    // return board.currentBoard[x] === "." ? (
+    return <QueenSqaure key={i} black={black} queenId={x} />;
+    // ) : (
+    //   <EmptySquare key={i} black={black} />
+    // );
   };
 
   let squares = [];
