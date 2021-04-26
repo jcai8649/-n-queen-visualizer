@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { resetResult } from "../../redux/result/result.actions";
 import solveNQueen from "../../script/backtrack";
 import styles from "./ControlPanel.module.css";
 
 const ControlPanel = () => {
+  const currentResult = useSelector((state) => state.result.currentResult);
   const dispatch = useDispatch();
   const [nSize, setNSize] = useState("8");
 
@@ -13,7 +15,12 @@ const ControlPanel = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setNewResult(currentResult);
     solveNQueen(Number(nSize), dispatch);
+  };
+
+  const setNewResult = (result) => {
+    if (result.length !== 0) dispatch(resetResult());
   };
 
   return (

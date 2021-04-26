@@ -14,6 +14,7 @@ const resultReducer = (state = INITIAL_STATE, action) => {
 
     case actionTypes.RESET_RESULT:
       return {
+        ...state,
         currentResult: [],
       };
     default:

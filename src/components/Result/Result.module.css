@@ -12,6 +12,10 @@
   padding-top: 10px;
 }
 
+.h4 {
+  text-align: center;
+}
+
 .resultContainer {
   height: 100px;
   overflow: auto;

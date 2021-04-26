@@ -6,11 +6,9 @@ var solveNQueens = function (n, dispatch) {
   //String in javascript is immutable, so here I use 2D array for chess board
   var chessBoard = new Array(n);
   for (var i = 0; i < n; i++) {
-    chessBoard[i] = new Array(n).fill("Q");
+    chessBoard[i] = new Array(n).fill(".");
   }
 
-  chessBoard[0][0] = "Q";
-  console.log(chessBoard);
   dispatch(updateBoard(chessBoard));
 
   var result = [];
@@ -46,7 +44,7 @@ var solveNQueens = function (n, dispatch) {
     }
   };
   backtrack(0);
-  // console.log(result);
+  // if (result.length === 0) dispatch(resetResult());
 };
 
 export default solveNQueens;
